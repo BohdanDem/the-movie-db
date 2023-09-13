@@ -5,7 +5,7 @@ import {IMovieDetails} from "../interfaces/movieInterface";
 
 const movieService = {
     getAll:():IRes<IMovieRes> => apiService.get(urls.movies),
-    getById: (id: number): IRes<IMovieDetails> => apiService.get(urls.movieDetails + id),
+    getById: (id: number): IRes<IMovieDetails> => apiService.get(urls.movieDetails + id)
 }
 
 export {

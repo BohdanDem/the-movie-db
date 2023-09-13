@@ -14,7 +14,7 @@ const MoviesListCards = () => {
     }, [dispatch])
 
     return (
-        <div className={css.wrapper}>
+        <div id={css.wrapper}>
             {results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
         </div>
     );

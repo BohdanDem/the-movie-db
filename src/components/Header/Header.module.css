@@ -1,6 +1,6 @@
 .header {
-    height: 100px;
-    background-color: black;
+    height: 120px;
+    background-color: #595959;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .userInfo {
-    font-size: 35px;
+    font-size: 25px;
     color: yellow;
     margin: 0 50px;
 }

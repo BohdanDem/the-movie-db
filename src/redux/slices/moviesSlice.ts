@@ -11,10 +11,10 @@ export interface IMovieRes {
 }
 
 const initialState: IMovieRes = {
-    page: 1,
+    page: null,
     results: [],
-    total_pages: 1,
-    total_results: 1
+    total_pages: null,
+    total_results: null
 }
 
 const getAll = createAsyncThunk<IMovieRes, void>(

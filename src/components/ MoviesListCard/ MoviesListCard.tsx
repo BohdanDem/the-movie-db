@@ -2,6 +2,8 @@ import React, {FC, PropsWithChildren} from 'react';
 import {IMovie} from "../../interfaces/movieInterface";
 import css from './ MoviesListCard.module.css'
 import PosterPreview from "../PosterPreview/PosterPreview";
+import StarRating from "../StarRating/StarRating";
+import {useNavigate} from "react-router-dom";
 
 interface IProps extends PropsWithChildren {
     movie: IMovie,
@@ -9,11 +11,15 @@ interface IProps extends PropsWithChildren {
 
 const MoviesListCard:FC<IProps> = ({movie}) => {
 
-    const {title, vote_average, poster_path} = movie
+    const navigate = useNavigate()
+    const {id, title, vote_average, poster_path} = movie
+
+    const handleClick = (id: number) => {navigate(`/movies/${id}`)};
 
     return (
-        <div className={css.movieCard}>
+        <div id={css.movieCard} onClick={() => handleClick(id)}>
             <PosterPreview poster_path={poster_path} title={title}/>
+            <StarRating vote_average={vote_average}/>
             <div>{title}</div>
         </div>
     );

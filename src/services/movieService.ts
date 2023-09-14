@@ -4,7 +4,7 @@ import {IMovieRes} from "../redux/slices/moviesSlice";
 import {IMovieCast, IMovieDetails} from "../interfaces/movieInterface";
 
 const movieService = {
-    getAll:():IRes<IMovieRes> => apiService.get(urls.movies),
+    getAll:(page:number):IRes<IMovieRes> => apiService.get(urls.movies, {params: {page}}),
     getById: (id: number): IRes<IMovieDetails> => apiService.get(urls.movieDetails + id),
     getCreditsById: (id: number): IRes<IMovieCast> => apiService.get(urls.credits(id))
 }

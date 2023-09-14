@@ -5,7 +5,8 @@ const posterURL = 'https://image.tmdb.org/t/p/w500'
 
 const urls = {
     movies: '/discover/movie',
-    movieDetails: '/movie/'
+    movieDetails: '/movie/',
+    credits: (id: number): string => `/movie/${id}/credits`
 }
 
 export {

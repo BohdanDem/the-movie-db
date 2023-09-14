@@ -1,5 +1,5 @@
 import React from 'react';
-import {MoviesListCards} from "../components/ MoviesListCards/ MoviesListCards";
+import {MoviesListCards} from "../components/MovieContainer/ MoviesListCards/ MoviesListCards";
 import Pagination from "../components/Pagination/Pagination";
 
 const MovieListPage = () => {

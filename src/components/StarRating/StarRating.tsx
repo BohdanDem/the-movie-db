@@ -4,9 +4,11 @@ import StarRatings from "react-star-ratings"
 
 interface IProps extends PropsWithChildren {
     vote_average: number
+    starSpacing: string
+    starDimension: string
 }
 
-const StarRating:FC<IProps> = ({vote_average}) => {
+const StarRating:FC<IProps> = ({vote_average, starSpacing, starDimension}) => {
 
     return (
         <StarRatings
@@ -14,8 +16,8 @@ const StarRating:FC<IProps> = ({vote_average}) => {
             starRatedColor="rgb(222 230 34)"
             numberOfStars={10}
             name='rating'
-            starDimension="15px"
-            starSpacing="1px"
+            starDimension={starDimension}
+            starSpacing={starSpacing}
         />
     );
 };

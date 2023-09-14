@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
-import {moviesActions} from "../../redux/slices/moviesSlice";
+import {useAppDispatch, useAppSelector} from "../../../hooks/reduxHooks";
+import {moviesActions} from "../../../redux/slices/moviesSlice";
 import MoviesListCard from "../ MoviesListCard/ MoviesListCard";
 import css from './ MoviesListCards.module.css'
 

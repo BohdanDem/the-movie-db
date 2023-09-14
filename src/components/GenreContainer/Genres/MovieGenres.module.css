@@ -1,0 +1,12 @@
+#genres {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+#genre {
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #2692de;
+}

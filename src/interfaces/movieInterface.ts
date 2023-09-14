@@ -16,7 +16,18 @@ export interface IMovieDetails {
     runtime: number
 }
 
-interface IGenre {
+export interface IGenre {
     id: number,
     name: string
+}
+
+export interface IMovieCast {
+    id: number,
+    cast: ICast[]
+}
+
+export interface ICast {
+    id: number,
+    name: string,
+    profile_path: string
 }

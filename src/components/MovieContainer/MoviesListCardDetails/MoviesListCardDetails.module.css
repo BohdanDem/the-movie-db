@@ -1,9 +1,13 @@
+body {
+    margin: 0;
+}
+
 .Movie {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 50px 50px 0;
 }
 
 .Movie img {

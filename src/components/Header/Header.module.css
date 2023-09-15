@@ -1,6 +1,14 @@
-.header {
+.headerBlack {
+    background-color: black;
     height: 120px;
-    background-color: #595959;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.headerWhite {
+    background-color: gray;
+    height: 120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -57,3 +65,29 @@
     height: 55px;
     border-radius: 50%;
 }
+
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 20px;
+    color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@ import {appRoutes} from "./appRoutes";
 import GenresPage from "../pages/GenresPage";
 import SearchPage from "../pages/SearchPage";
 import MoviesListCardPage from "../pages/MoviesListCardPage";
+import GenresDetailPage from "../pages/GenresDetailPage";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: appRoutes.MoviesListCard,
                 element: <MoviesListCardPage/>
+            },
+            {
+                path: appRoutes.GenresDetail,
+                element: <GenresDetailPage/>
             }
         ]
     }

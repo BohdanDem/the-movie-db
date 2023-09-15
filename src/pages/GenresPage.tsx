@@ -3,7 +3,9 @@ import AllGenres from "../components/AllGenresContainer/AllGenres/AllGenres";
 
 const GenresPage = () => {
     return (
-        <AllGenres/>
+        <div>
+            <AllGenres/>
+        </div>
     );
 };
 

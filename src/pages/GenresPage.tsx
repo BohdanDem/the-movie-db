@@ -1,10 +1,9 @@
 import React from 'react';
+import AllGenres from "../components/AllGenresContainer/AllGenres/AllGenres";
 
 const GenresPage = () => {
     return (
-        <div>
-            <h1>GenresPage</h1>
-        </div>
+        <AllGenres/>
     );
 };
 

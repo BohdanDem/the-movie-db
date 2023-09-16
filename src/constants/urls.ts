@@ -7,7 +7,8 @@ const urls = {
     movies: '/discover/movie',
     movieDetails: '/movie/',
     credits: (id: number): string => `/movie/${id}/credits`,
-    genres: '/genre/movie/list'
+    genres: '/genre/movie/list',
+    search: '/search/movie'
 }
 
 export {

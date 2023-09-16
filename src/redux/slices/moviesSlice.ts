@@ -43,6 +43,19 @@ const setAllByGenre = createAsyncThunk<IMovieRes, {page:number, with_genres:numb
     }
 )
 
+const getAllBySearch = createAsyncThunk<IMovieRes, {page:number, query:string}>(
+    'moviesSlice/getAllBySearch',
+    async ({page, query}, {rejectWithValue}) => {
+        try {
+            const {data} = await movieService.getAllBySearch(page, query);
+            return data
+        } catch (e) {
+            const err = e as AxiosError
+            return rejectWithValue(err)
+        }
+    }
+)
+
 const moviesSlice = createSlice({
     name: 'movieSlice',
     initialState,
@@ -60,6 +73,12 @@ const moviesSlice = createSlice({
             state.total_pages = action.payload.total_pages
             state.total_results = action.payload.total_results
         })
+        .addCase(getAllBySearch.fulfilled, (state, action) => {
+            state.page = action.payload.page
+            state.results = action.payload.results
+            state.total_pages = action.payload.total_pages
+            state.total_results = action.payload.total_results
+        })
 })
 
 const {reducer: moviesReducer, actions} = moviesSlice;
@@ -67,7 +86,8 @@ const {reducer: moviesReducer, actions} = moviesSlice;
 const moviesActions = {
     ...actions,
     getAll,
-    setAllByGenre
+    setAllByGenre,
+    getAllBySearch
 }
 
 export {

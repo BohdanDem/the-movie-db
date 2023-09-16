@@ -31,3 +31,7 @@ export interface ICast {
     name: string,
     profile_path: string
 }
+
+export interface ISearch {
+    querySearchData: string
+}

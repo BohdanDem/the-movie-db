@@ -8,6 +8,7 @@ const movieService = {
     getById: (id: number): IRes<IMovieDetails> => apiService.get(urls.movieDetails + id),
     getCreditsById: (id: number): IRes<IMovieCast> => apiService.get(urls.credits(id)),
     getAllByGenre:(page:number, with_genres:number):IRes<IMovieRes> => apiService.get(urls.movies, {params: {page, with_genres}}),
+    getAllBySearch:(page:number, query:string):IRes<IMovieRes> => apiService.get(urls.search, {params: {page, query}}),
 }
 
 export {

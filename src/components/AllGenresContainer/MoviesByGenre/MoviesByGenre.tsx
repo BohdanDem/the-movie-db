@@ -9,7 +9,6 @@ import Pagination from "../../Pagination/Pagination";
 const MoviesByGenre = () => {
 
     const {id, name} = useAppSelector(state => state.singleGenreId);
-
     const dispatch = useAppDispatch();
     const {results} = useAppSelector(state => state.movies);
     const [query, setQuery] = useSearchParams({page: '1', with_genres: `${id}`});
@@ -19,6 +18,7 @@ const MoviesByGenre = () => {
     }, [dispatch, query])
 
     return (
+
         <div>
             <div className={css.header}>{name}</div>
             <div className={css.wrapper}>{results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}</div>

@@ -4,6 +4,7 @@ import {authReducer} from "./slices/authSlice";
 import {themeReducer} from "./slices/themeSlice";
 import {genresReducer} from "./slices/genresSlice";
 import {singleGenreIdReducer} from "./slices/singleGenreIdSlice";
+import {searchQueryReducer} from "./slices/searchQuerySlice";
 
 const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ const store = configureStore({
         me: authReducer,
         theme: themeReducer,
         genres: genresReducer,
-        singleGenreId: singleGenreIdReducer
+        singleGenreId: singleGenreIdReducer,
+        querySearch: searchQueryReducer
     }
 })
 

@@ -16,7 +16,7 @@ const SingleGenre:FC<IProps> = ({genre}) => {
     const {id, name} = genre
 
     const handleClick = (id: number) => {
-        navigate(`/genres/${id}`, {state: genre})
+        navigate(`/genres/${id}`)
         dispatch(singleGenreIdActions.setSingleGenreId(genre))
     };
 

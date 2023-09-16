@@ -1,9 +1,19 @@
 import React from 'react';
+import {MoviesListCards} from "../components/MovieContainer/ MoviesListCards/ MoviesListCards";
+import Pagination from "../components/Pagination/Pagination";
+import MovieSearchForm from "../components/MovieSearchForm/MovieSearchForm";
+import {useAppSelector} from "../hooks/reduxHooks";
+import MoviesBySearch from "../components/MovieContainer/MoviesBySearch/MoviesBySearch";
 
 const SearchPage = () => {
+
+    const {querySearchData} = useAppSelector(state => state.querySearch);
+
     return (
         <div>
-            <h1>SearchPage</h1>
+            <MovieSearchForm/>
+            {querySearchData ? <MoviesBySearch/> : <MoviesListCards/>}
+            <Pagination/>
         </div>
     );
 };

@@ -1,5 +1,12 @@
 .poster {
-    width: 180px;
-    height: 250px;
+    width: 250px;
+    height: 340px;
     border-radius: 10px;
+    filter: grayscale(100%);
+    margin-bottom: 12px;
+    transition: linear 0.3s;
+}
+
+.poster:hover {
+    filter: grayscale(0%);
 }

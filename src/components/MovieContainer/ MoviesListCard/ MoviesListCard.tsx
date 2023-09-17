@@ -13,7 +13,7 @@ const MoviesListCard:FC<IProps> = ({movie}) => {
 
     const navigate = useNavigate()
     const {id, title, vote_average, poster_path} = movie
-    const starDimension: string = "15px"
+    const starDimension: string = "18px"
     const starSpacing: string = "1px"
 
     const handleClick = (id: number) => {navigate(`/movies/${id}`)};
@@ -22,7 +22,7 @@ const MoviesListCard:FC<IProps> = ({movie}) => {
         <div id={css.movieCard} onClick={() => handleClick(id)}>
             <PosterPreview poster_path={poster_path} title={title}/>
             <StarRating vote_average={vote_average} starDimension={starDimension} starSpacing={starSpacing}/>
-            <div>{title}</div>
+            <div id={css.title}>{title}</div>
         </div>
     );
 };

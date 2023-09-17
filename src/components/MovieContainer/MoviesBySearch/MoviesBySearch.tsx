@@ -8,18 +8,20 @@ import MoviesListCard from "../ MoviesListCard/ MoviesListCard";
 const MoviesBySearch = () => {
     const dispatch = useAppDispatch();
     const {querySearchData} = useAppSelector(state => state.querySearch);
-    const [query, setQuery] = useSearchParams({page: '1', query: `${querySearchData}`});
+    const [query, setQuery] = useSearchParams({page: '1'});
     const {results} = useAppSelector(state => state.movies);
 
     useEffect(() => {
-        dispatch(moviesActions.getAllBySearch({page: +query.get('page'), query: query.get('query')}))
+        dispatch(moviesActions.getAllBySearch({page: +query.get('page'), query: querySearchData}))
     }, [dispatch, query, querySearchData])
 
-    return (
-        <div className={css.wrapper}>
-            {results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-        </div>
-    );
+    if (results) {
+        return (
+            <div className={css.wrapper}>
+                {results.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+            </div>
+        );
+    }
 };
 
 export default MoviesBySearch;
